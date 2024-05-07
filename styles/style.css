@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+}
+header {
+  background: rgb(24, 39, 179);
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+header h1 {
+  text-wrap: wrap;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-weight: weight;
+}
+body {
+  /* height: 100vh; */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+
+ 
+}
+form{
+    width:95%
+}
+
+footer{
+    height: 100px;
+    background-color: #1e1e1e;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:-1;
+}
+footer::after{
+    content:"Powered By Valdeir" ;
+    color:#7c7979aa;
+    text-shadow: #fafafc;
+}
+form {
+  padding: 1em;
+  /* height: 80vh; */
+
+  background-color: #7573733b;
+  /* margin-top: 38px; */
+  padding: 24px;
+  margin: 4px;
+  border-radius: 20px;
+}
+
+fieldset {
+  border: none;
+  margin-top: 31px;
+}
+fieldset legend {
+  border-bottom: 1px solid #2a2ae7;
+  width: 100%;
+  padding: 16px;
+  /* margin-bottom: 36px; */
+  text-transform: uppercase;
+}
+fieldset label {
+  margin: 16px;
+}
+fieldset input {
+  height: 56px;
+  margin-top: 8px;
+
+  background: #fafafc;
+  width: 100%;
+
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+fieldset h2 {
+  margin: 32px auto 12px;
+}
+
+.container-btn {
+  height: 160px;
+  /* background-color: #535971; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.container-btn button {
+  border: none;
+  height: 55px;
+  border-radius: 14px;
+  cursor: pointer;
+  background-color: rgb(24, 39, 179);
+  /* font-family: "Staatliches", cursive; */
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  transition: 2000ms;
+}
+
+.container-btn button:hover {
+  background-color: rgb(48, 65, 220);
+}
+
+label {
+  color: rgb(47, 45, 45);
+  font-weight: bold;
+}
+
+input {
+  height: 56px;
+  margin-top: 8px;
+  padding-left: 1rem;
+
+  background: #fafafc;
+  width: 100%;
+
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+textarea{
+    
+    border-radius: 20px;
+    margin-top:1rem;
+    resize: none;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
