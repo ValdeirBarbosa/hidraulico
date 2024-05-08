@@ -10,22 +10,38 @@
 }
 header {
   background: rgb(24, 39, 179);
-  height: 15vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
  
   
 }
-header h1 {
-  text-wrap: wrap;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  font-weight: weight;
+header::before {
+  content: "Casa do Hidrualico Paraiso";
+  color:white;
+  background: rgb(57, 71, 193);
+  height: 15vh;
+  display: flex;
+  align-items:start;
+  justify-content: center;
+  padding-top: 2rem;
+  font-size: 24px;
+  font-weight: bold;
+  
+  width:100%;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
+
+
+
 body {
-  /* height: 100vh; */
+  position: relative;
+  height: calc(100vh-25vh-10vh);
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -34,33 +50,35 @@ body {
 
  
 }
+
 form{
-    width:95%
+    width:95%;
+    position: relative;
+    top:14vh;
+    margin-top: 50vh;
+    padding: 1em;
+  /* height: 80vh; */
+
+  background-color: #c1c3da;
+  /* margin-top: 38px; */
+  padding: 24px;
+  margin: 4px;
+  border-radius: 20px;
 }
 
 footer{
-    height: 100px;
+    height: 15vh;
     background-color: #1e1e1e;
     width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:-1;
+    z-index:3;
 }
 footer::after{
     content:"Powered By Valdeir" ;
     color:#7c7979aa;
     text-shadow: #fafafc;
-}
-form {
-  padding: 1em;
-  /* height: 80vh; */
-
-  background-color: #7573733b;
-  /* margin-top: 38px; */
-  padding: 24px;
-  margin: 4px;
-  border-radius: 20px;
 }
 
 fieldset {
@@ -144,4 +162,23 @@ textarea{
     padding-bottom:20px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.search-wrapper{
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width:100%;
+  background-color: #2a2ae7;
+  border-radius: 20px;
+}
+.search-wrapper input{
+  height: 50px;
+}
+.search-wrapper svg{
+  z-index:3;
+  width: 20px;
 }
