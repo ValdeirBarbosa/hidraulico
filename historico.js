@@ -12,8 +12,10 @@ function exibirOrdensDeServico() {
     let itemsHTML = "";
     ordem.itens.forEach((item) => {
       itemsHTML += `
-                <p><strong>Código:</strong> ${item.codigo}</p>
-                <p><strong>Quantidade:</strong> ${item.quantidade}</p>
+                <tr>
+                <td> ${item.codigo}</td>
+                <td>${item.quantidade}</td>
+                </tr>
             `;
     });
 
@@ -22,25 +24,36 @@ function exibirOrdensDeServico() {
     ordemDiv.innerHTML = `
             <h2>Ordem de Serviço</h2>
             <div class="card">
-    <div class="card-header">
-        <h5 class="card-title">Detalhes da Ordem de Serviço</h5>
-    </div>
-    <div class="card-body">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>ID da OS:</strong> ${ordem.id}</li>
-            <li class="list-group-item"><strong>Data:</strong> ${ordem.data}</li>
-            <li class="list-group-item"><strong>Nome do Cliente:</strong> ${ordem.nome}</li>
-            <li class="list-group-item"><strong>Telefone:</strong> ${ordem.telefone}</li>
-            <li class="list-group-item"><strong>Descrição:</strong> ${ordem.descricao}</li>
-        </ul>
-    </div>
-    <div class="card-footer">
-        <h5 class="card-title">Peças e Serviços</h5>
-        <div id="items" class="card-text">
-            ${itemsHTML}
+            <div class="card-header">
+                <h5 class="card-title">Detalhes da Ordem de Serviço</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item">
+                        <div><strong>ID da OS:</strong> ${ordem.id}</div>
+                        <div><strong>Data:</strong> ${ordem.data}</div>
+                    </div>
+                    <div class="list-group-item">
+                        <div><strong>Nome do Cliente:</strong> ${ordem.nome}</div>
+                        <div><strong>Telefone:</strong> ${ordem.telefone}</div>
+                    </div>
+                    <div class="list-group-item">
+                        <div><strong>Descrição:</strong> ${ordem.descricao}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5 class="card-title">Peças e Serviços</h5>
+                <div id="items" class="card-text">
+                <table>
+                <tr><th>Código</th><th>Qtd.</th></tr>
+                    ${itemsHTML}
+                </table>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        
+        
 
         `;
     // ordemDiv.innerHTML = `
@@ -67,7 +80,7 @@ function pesquisarOrdemDeServico() {
   const resultadoDiv = document.getElementById("resultado-pesquisa");
   resultadoDiv.innerHTML = "";
 
-  const ordem = ordensDeServico.find((os) => os.id === pesquisaId);
+  const ordem = ordensDeServico.find((os) => os.nome === pesquisaId);
   if (ordem) {
     let itemsHTML = "";
     ordem.itens.forEach((item) => {

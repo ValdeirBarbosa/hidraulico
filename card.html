@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registroosStyles.css">
+  
+    <title>Document</title>
+</head>
+<body>
+    <div id="historico-ordens-servico">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Detalhes da Ordem de Serviço</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item"><strong>ID da OS:</strong> ${ordem.id}
+                    <strong>Data:</strong> ${ordem.data}</div>
+                    <div class="list-group-item"><strong>Nome do Cliente:</strong> ${ordem.nome}<strong>Telefone:</strong> ${ordem.telefone}</div>
+                    <div class="list-group-item"><strong>Descrição:</strong> ${ordem.descricao}</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5 class="card-title">Peças e Serviços</h5>
+                <div id="items" class="card-text">
+                    ${itemsHTML}
+                </div>
+            </div>
+        </div>
+        <!-- Histórico das ordens de serviço será exibido aqui -->
+    </div>
+</body>
+</html>
